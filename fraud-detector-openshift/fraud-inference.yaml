@@ -1,0 +1,14 @@
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
+metadata:
+  name: fraud-detector
+  namespace: fraud-inference
+spec:
+  predictor:
+    model:
+      modelFormat:
+        name: sklearn
+      runtime: "rhaiis-sklearn"
+      storage:
+        path: fraud-detector-openshift/models
+        uri: https://github.com/your-username/fraud-detector-openshift.git#refs/heads/main
