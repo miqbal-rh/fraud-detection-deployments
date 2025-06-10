@@ -1,0 +1,10 @@
+modelmesh:
+  modelRepo:
+    name: "fraud-detector"
+    storage:
+      type: "local"
+      path: "/models"
+    model:
+      format: sklearn
+      path: "model.joblib"
+      runtime: "mlserver"
